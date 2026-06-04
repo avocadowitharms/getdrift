@@ -37,10 +37,41 @@
       <a href="#repository">Repository</a>
       <a href="#context">Context</a>
       <a href="#local-first">Local-first</a>
-      <a href="#early-access">Access</a>
+      <a href="#subscribe">Access</a>
     </nav>
-    <a class="header-button" href="mailto:avocadowitharms@gmail.com?subject=drift%20subscribe">Subscribe</a>
+    <button class="header-button" type="button" data-subscribe-open>Subscribe</button>
   </header>
+
+  <div class="subscribe-modal" data-subscribe-modal hidden>
+    <button class="subscribe-backdrop" type="button" data-subscribe-close aria-label="Close subscribe form"></button>
+    <article class="subscribe-card" role="dialog" aria-modal="true" aria-labelledby="top-subscribe-title">
+      <button class="subscribe-close" type="button" data-subscribe-close aria-label="Close subscribe form">x</button>
+      <div>
+        <p class="eyebrow">Subscribe</p>
+        <h3 id="top-subscribe-title">Join the drift waitlist.</h3>
+        <p>Get launch updates, beta access, and future features.</p>
+      </div>
+      <div class="subscribe-panel ml-subscribe-form-42186436">
+        <form
+          class="subscribe-form ml-block-form row-form"
+          action="https://assets.mailerlite.com/jsonp/2378130/forms/189334657074988207/subscribe"
+          method="post"
+          target="_blank"
+        >
+          <label class="sr-only" for="top-subscribe-email">Email</label>
+          <input id="top-subscribe-email" aria-label="email" aria-required="true" type="email" name="fields[email]" placeholder="Email" autocomplete="email" required />
+          <input type="hidden" name="ml-submit" value="1" />
+          <input type="hidden" name="anticsrf" value="true" />
+          <button class="button primary" type="submit">Join drift</button>
+          <p>You can unsubscribe anytime. For more details, review our Privacy Policy.</p>
+        </form>
+        <div class="subscribe-success row-success" style="display: none">
+          <strong>Thank you!</strong>
+          <p>You have successfully joined the subscriber list.</p>
+        </div>
+      </div>
+    </article>
+  </div>
 
   <main>
     <section id="workspace" class="page-section hero-section" aria-labelledby="workspace-title">
@@ -54,7 +85,7 @@
           project into another cloud tool.
         </p>
         <div class="actions">
-          <a class="button primary" href="mailto:avocadowitharms@gmail.com?subject=drift%20subscribe">Subscribe</a>
+          <button class="button primary" type="button" data-subscribe-open>Subscribe</button>
         </div>
         <p class="fine-print">Local-first. Developer-focused. Built for real projects.</p>
       </div>
@@ -168,11 +199,11 @@
       </figure>
     </section>
 
-    <section id="early-access" class="page-section final-section" aria-labelledby="early-access-title">
+    <section id="subscribe" class="page-section final-section" aria-labelledby="subscribe-title">
       <div class="section-number">06</div>
       <div class="section-copy">
         <p class="eyebrow">Keep moving</p>
-        <h2 id="early-access-title">Clone the repository. Continue working.</h2>
+        <h2 id="subscribe-title">Clone the repository. Continue working.</h2>
         <p>
           drift is built for a future where project context travels with the code. Open a
           repository and instantly recover the tasks, notes, documentation, assets, and
@@ -187,18 +218,44 @@
         </ul>
       </div>
       <div class="workflow">
-        <div class="terminal"><span></span><span></span><span></span><code>$ git clone github.com/drift-app/drift</code></div>
-        <div class="arrow" aria-hidden="true">&darr;</div>
-        <div class="workflow-card">Open drift <strong>drift</strong></div>
-        <div class="arrow" aria-hidden="true">&darr;</div>
-        <div class="workflow-card">Continue where you left off</div>
-      </div>
+  <div class="workflow-card">Connect a repository</div>
+
+  <div class="arrow" aria-hidden="true">&darr;</div>
+
+  <div class="workflow-card">Open it in <strong>drift</strong></div>
+
+  <div class="arrow" aria-hidden="true">&darr;</div>
+
+  <div class="workflow-card">Tasks, notes & assets restored</div>
+
+  <div class="arrow" aria-hidden="true">&darr;</div>
+
+  <div class="workflow-card">Keep building</div>
+</div>
       <div class="closing-card">
         <div>
           <h2>Software projects need more than source code.</h2>
           <p>drift keeps everything else connected.</p>
         </div>
-        <a class="button primary" href="mailto:avocadowitharms@gmail.com?subject=drift%20subscribe">Subscribe</a>
+        <div class="subscribe-panel ml-subscribe-form-42186436">
+          <form
+            class="subscribe-form ml-block-form row-form"
+            action="https://assets.mailerlite.com/jsonp/2378130/forms/189334657074988207/subscribe"
+            method="post"
+            target="_blank"
+          >
+          <label class="sr-only" for="bottom-subscribe-email">Email</label>
+          <input id="bottom-subscribe-email" aria-label="email" aria-required="true" type="email" name="fields[email]" placeholder="Email" autocomplete="email" required />
+            <input type="hidden" name="ml-submit" value="1" />
+            <input type="hidden" name="anticsrf" value="true" />
+            <button class="button primary" type="submit">Join drift</button>
+            <p>You can unsubscribe anytime. For more details, review our Privacy Policy.</p>
+          </form>
+          <div class="subscribe-success row-success" style="display: none">
+            <strong>Thank you!</strong>
+            <p>You have successfully joined the subscriber list.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -207,6 +264,73 @@
     <span>&copy; Ava Thalheim</span>
     <a href="https://avathalheim.dev/" target="_blank" rel="noopener noreferrer">avathalheim.dev</a>
     <a href="mailto:avocadowitharms@gmail.com">avocadowitharms@gmail.com</a>
+    <div class="footer-actions">
+      <a class="footer-pill coffee-link" href="https://buymeacoffee.com/avocadowita" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h12v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V5Zm14 2h1a3 3 0 0 1 0 6h-1V7ZM6 7v5a3 3 0 0 0 3 3h2a3 3 0 0 0 3-3V7H6Zm12 2v2h1a1 1 0 0 0 0-2h-1ZM3 19h15v2H3v-2Z"/></svg>
+        <span>Buy me a coffee</span>
+      </a>
+      <a class="footer-pill top-link" href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+    </div>
   </footer>
+  <script>
+    function ml_webform_success_42186436() {
+      var forms = document.querySelectorAll(".ml-subscribe-form-42186436 .row-form");
+      var successes = document.querySelectorAll(".ml-subscribe-form-42186436 .row-success");
+
+      forms.forEach(function (form) {
+        form.style.display = "none";
+      });
+
+      successes.forEach(function (success) {
+        success.style.display = "grid";
+      });
+    }
+
+    (function () {
+      var openButtons = document.querySelectorAll("[data-subscribe-open]");
+      var modal = document.querySelector("[data-subscribe-modal]");
+      var closeButtons = document.querySelectorAll("[data-subscribe-close]");
+      var lastTrigger = null;
+
+      function openSubscribe(trigger) {
+        lastTrigger = trigger;
+        modal.hidden = false;
+        document.body.classList.add("has-modal");
+
+        var email = modal.querySelector("#top-subscribe-email");
+        if (email) {
+          email.focus();
+        }
+      }
+
+      function closeSubscribe() {
+        modal.hidden = true;
+        document.body.classList.remove("has-modal");
+
+        if (lastTrigger) {
+          lastTrigger.focus();
+        }
+      }
+
+      openButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          openSubscribe(button);
+        });
+      });
+
+      closeButtons.forEach(function (button) {
+        button.addEventListener("click", closeSubscribe);
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && !modal.hidden) {
+          closeSubscribe();
+        }
+      });
+    }());
+
+    fetch("https://assets.mailerlite.com/jsonp/2378130/forms/189334657074988207/takel").catch(function () {});
+  </script>
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
 </body>
 </html>
