@@ -14,20 +14,54 @@
   />
   <meta name="author" content="drift" />
   <meta name="robots" content="index, follow" />
+  <meta name="application-name" content="drift" />
+  <meta name="theme-color" content="#f6f3ed" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="canonical" href="https://driftworkspace.app/" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="sitemap" href="sitemap.xml" type="application/xml" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="drift" />
+  <meta property="og:url" content="https://driftworkspace.app/" />
   <meta property="og:title" content="drift - The workspace around your repository" />
   <meta
     property="og:description"
     content="A local-first workspace for the project knowledge that lives around your repository."
   />
-  <meta property="og:image" content="assets/drift-project-timeline.png" />
+  <meta property="og:image" content="https://driftworkspace.app/assets/drift-project-timeline.png" />
+  <meta property="og:image:alt" content="drift project workspace showing repository timeline, project overview, tasks, and notes" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://driftworkspace.app/" />
   <meta name="twitter:title" content="drift - The workspace around your repository" />
   <meta
     name="twitter:description"
     content="Keep tasks, notes, files, timelines, and repository context together."
   />
+  <meta name="twitter:image" content="https://driftworkspace.app/assets/drift-project-timeline.png" />
+  <meta name="twitter:image:alt" content="drift project workspace showing repository timeline, project overview, tasks, and notes" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "drift",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Windows, macOS, Linux",
+      "url": "https://driftworkspace.app/",
+      "description": "drift is a local-first project workspace that keeps tasks, notes, timelines, files, and repository context connected to your code.",
+      "image": "https://driftworkspace.app/assets/drift-project-timeline.png",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/PreOrder",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Ava Thalheim",
+        "url": "https://avathalheim.dev/"
+      }
+    }
+  </script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body id="top">
@@ -63,7 +97,7 @@
           <input type="hidden" name="ml-submit" value="1" />
           <input type="hidden" name="anticsrf" value="true" />
           <button class="button primary" type="submit">Join drift</button>
-          <p>You can unsubscribe anytime. For more details, review our Privacy Policy.</p>
+          <p>You can unsubscribe anytime. For more details, review our <a href="docs/privacy-policy.html">Privacy Policy</a>.</p>
         </form>
         <div class="subscribe-success row-success" style="display: none">
           <strong>Thank you!</strong>
@@ -249,7 +283,7 @@
             <input type="hidden" name="ml-submit" value="1" />
             <input type="hidden" name="anticsrf" value="true" />
             <button class="button primary" type="submit">Join drift</button>
-            <p>You can unsubscribe anytime. For more details, review our Privacy Policy.</p>
+            <p>You can unsubscribe anytime. For more details, review our <a href="docs/privacy-policy.html">Privacy Policy</a>.</p>
           </form>
           <div class="subscribe-success row-success" style="display: none">
             <strong>Thank you!</strong>
@@ -264,6 +298,11 @@
     <span>&copy; Ava Thalheim</span>
     <a href="https://avathalheim.dev/" target="_blank" rel="noopener noreferrer">avathalheim.dev</a>
     <a href="mailto:avocadowitharms@gmail.com">avocadowitharms@gmail.com</a>
+    <nav class="footer-links" aria-label="Support and legal">
+      <a href="docs/support.html">Support</a>
+      <a href="docs/privacy-policy.html">Privacy</a>
+      <a href="docs/terms-of-use.html">Terms</a>
+    </nav>
     <div class="footer-actions">
       <a class="footer-pill coffee-link" href="https://buymeacoffee.com/avocadowita" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h12v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V5Zm14 2h1a3 3 0 0 1 0 6h-1V7ZM6 7v5a3 3 0 0 0 3 3h2a3 3 0 0 0 3-3V7H6Zm12 2v2h1a1 1 0 0 0 0-2h-1ZM3 19h15v2H3v-2Z"/></svg>

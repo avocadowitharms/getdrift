@@ -1,0 +1,10 @@
+{
+  "name": "drift",
+  "short_name": "drift",
+  "description": "A local-first project workspace around your repository.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f6f3ed",
+  "theme_color": "#f6f3ed"
+}

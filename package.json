@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "seo:generate": "node scripts/generate-sitemap.mjs"
+  },
+  "devDependencies": {}
+}
