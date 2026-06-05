@@ -2,5 +2,7 @@
   "scripts": {
     "seo:generate": "node scripts/generate-sitemap.mjs"
   },
-  "devDependencies": {}
+  "dependencies": {
+    "@material/web": "^2.4.1"
+  }
 }

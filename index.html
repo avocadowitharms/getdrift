@@ -1,277 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>drift - The workspace around your repository</title>
-  <meta
-    name="description"
-    content="drift is a local-first project workspace that keeps tasks, notes, timelines, files, and repository context connected to your code."
-  />
-  <meta
-    name="keywords"
-    content="drift, repository workspace, developer project management, GitHub notes, local-first project context"
-  />
-  <meta name="author" content="drift" />
-  <meta name="robots" content="index, follow" />
-  <meta name="application-name" content="drift" />
-  <meta name="theme-color" content="#f6f3ed" />
-  <meta name="format-detection" content="telephone=no" />
-  <link rel="canonical" href="https://driftworkspace.app/" />
-  <link rel="icon" href="assets/favicon-32x32.png" type="image/png" sizes="32x32" />
-  <link rel="icon" href="assets/favicon-16x16.png" type="image/png" sizes="16x16" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <link rel="manifest" href="site.webmanifest" />
-  <link rel="sitemap" href="sitemap.xml" type="application/xml" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="drift" />
-  <meta property="og:url" content="https://driftworkspace.app/" />
-  <meta property="og:title" content="drift - The workspace around your repository" />
-  <meta
-    property="og:description"
-    content="A local-first workspace for the project knowledge that lives around your repository."
-  />
-  <meta property="og:image" content="https://driftworkspace.app/assets/drift-project-timeline.png" />
-  <meta property="og:image:alt" content="drift project workspace showing repository timeline, project overview, tasks, and notes" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://driftworkspace.app/" />
-  <meta name="twitter:title" content="drift - The workspace around your repository" />
-  <meta
-    name="twitter:description"
-    content="Keep tasks, notes, files, timelines, and repository context together."
-  />
-  <meta name="twitter:image" content="https://driftworkspace.app/assets/drift-project-timeline.png" />
-  <meta name="twitter:image:alt" content="drift project workspace showing repository timeline, project overview, tasks, and notes" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "drift",
-      "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "Windows, macOS, Linux",
-      "url": "https://driftworkspace.app/",
-      "description": "drift is a local-first project workspace that keeps tasks, notes, timelines, files, and repository context connected to your code.",
-      "image": "https://driftworkspace.app/assets/drift-project-timeline.png",
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/PreOrder",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "creator": {
-        "@type": "Person",
-        "name": "Ava Thalheim",
-        "url": "https://avathalheim.dev/"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>drift - The workspace around your repository</title>
+    <meta
+      name="description"
+      content="drift is a local-first project workspace that keeps tasks, notes, timelines, files, and repository context connected to your code."
+    />
+    <meta
+      name="keywords"
+      content="drift, repository workspace, developer project management, GitHub notes, local-first project context"
+    />
+    <meta name="author" content="drift" />
+    <meta name="robots" content="index, follow" />
+    <meta name="application-name" content="drift" />
+    <meta name="theme-color" content="#f6f3ed" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="canonical" href="https://driftworkspace.app/" />
+    <link
+      rel="icon"
+      href="assets/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="assets/favicon-16x16.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="sitemap" href="sitemap.xml" type="application/xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="drift" />
+    <meta property="og:url" content="https://driftworkspace.app/" />
+    <meta
+      property="og:title"
+      content="drift - The workspace around your repository"
+    />
+    <meta
+      property="og:description"
+      content="A local-first workspace for the project knowledge that lives around your repository."
+    />
+    <meta
+      property="og:image"
+      content="https://driftworkspace.app/assets/drift-project-timeline.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="drift project workspace showing repository timeline, project overview, tasks, and notes"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://driftworkspace.app/" />
+    <meta
+      name="twitter:title"
+      content="drift - The workspace around your repository"
+    />
+    <meta
+      name="twitter:description"
+      content="Keep tasks, notes, files, timelines, and repository context together."
+    />
+    <meta
+      name="twitter:image"
+      content="https://driftworkspace.app/assets/drift-project-timeline.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="drift project workspace showing repository timeline, project overview, tasks, and notes"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "drift",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Windows, macOS, Linux",
+        "url": "https://driftworkspace.app/",
+        "description": "drift is a local-first project workspace that keeps tasks, notes, timelines, files, and repository context connected to your code.",
+        "image": "https://driftworkspace.app/assets/drift-project-timeline.png",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/PreOrder",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "creator": {
+          "@type": "Person",
+          "name": "Ava Thalheim",
+          "url": "https://avathalheim.dev/"
+        }
       }
-    }
-  </script>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body id="top">
-  <header class="site-header" aria-label="drift">
-    <a class="brand" href="#top" aria-label="drift home">drift</a>
-    <nav aria-label="Landing page sections">
-      <a href="#repository">Repository</a>
-      <a href="#context">Context</a>
-      <a href="#local-first">Local-first</a>
-      <a href="#subscribe">Access</a>
-    </nav>
-  </header>
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script type="module">
+      import "https://esm.run/@material/web/button/filled-button.js";
+      import "https://esm.run/@material/web/button/outlined-button.js";
+      import "https://esm.run/@material/web/textfield/outlined-text-field.js";
+      import "https://esm.run/@material/web/dialog/dialog.js";
+    </script>
+  </head>
+  <body id="top">
+    <header class="site-header" aria-label="drift">
+      <a class="brand" href="#top" aria-label="drift home">drift</a>
+      <nav aria-label="Landing page sections">
+        <a href="#repository">Repository</a>
+        <a href="#context">Context</a>
+        <a href="#local-first">Local-first</a>
+        <a href="#subscribe">Access</a>
+      </nav>
+    </header>
 
-  <div class="subscribe-modal" data-subscribe-modal hidden>
-    <button class="subscribe-backdrop" type="button" data-subscribe-close aria-label="Close subscribe form"></button>
-    <article class="subscribe-card" role="dialog" aria-modal="true" aria-labelledby="top-subscribe-title">
-      <button class="subscribe-close" type="button" data-subscribe-close aria-label="Close subscribe form">x</button>
-      <div>
-        <p class="eyebrow">Subscribe</p>
-        <h3 id="top-subscribe-title">Join the drift waitlist.</h3>
-        <p>Get launch updates, beta access, and future features.</p>
-      </div>
-      <div class="subscribe-panel ml-subscribe-form-42186436">
-        <form
-          class="subscribe-form ml-block-form row-form"
-          action="https://assets.mailerlite.com/jsonp/2378130/forms/189334657074988207/subscribe"
-          method="post"
-          target="_blank"
+    <div class="subscribe-modal" data-subscribe-modal hidden>
+      <button
+        class="subscribe-backdrop"
+        type="button"
+        data-subscribe-close
+        aria-label="Close subscribe form"
+      ></button>
+      <article
+        class="subscribe-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="top-subscribe-title"
+      >
+        <button
+          class="subscribe-close"
+          type="button"
+          data-subscribe-close
+          aria-label="Close subscribe form"
         >
-          <label class="sr-only" for="top-subscribe-email">Email</label>
-          <input id="top-subscribe-email" aria-label="email" aria-required="true" type="email" name="fields[email]" placeholder="Email" autocomplete="email" required />
-          <input type="hidden" name="ml-submit" value="1" />
-          <input type="hidden" name="anticsrf" value="true" />
-          <button class="button primary" type="submit">Join drift</button>
-          <p>You can unsubscribe anytime. For more details, review our <a href="docs/privacy-policy.html">Privacy Policy</a>.</p>
-        </form>
-        <div class="subscribe-success row-success" style="display: none">
-          <strong>Thank you!</strong>
-          <p>You have successfully joined the subscriber list.</p>
-        </div>
-      </div>
-    </article>
-  </div>
-
-  <main>
-    <section id="workspace" class="page-section hero-section" aria-labelledby="workspace-title">
-      <div class="section-number">01</div>
-      <div class="section-copy">
-        <p class="eyebrow">drift</p>
-        <h1 id="workspace-title">The workspace around your repository.</h1>
-        <p>
-          Manage tasks, notes, timelines, files, and project context directly alongside
-          your code. drift gives every repository a real workspace without forcing your
-          project into another cloud tool.
-        </p>
-        <div class="actions">
-          <button class="button primary" type="button" data-subscribe-open>Subscribe</button>
-        </div>
-        <p class="fine-print">Local-first. Developer-focused. Built for real projects.</p>
-      </div>
-      <figure class="screenshot-frame hero-shot">
-        <img
-          src="assets/drift-project-timeline.png"
-          alt="drift project workspace showing repository timeline, project overview, tasks, and notes"
-        />
-      </figure>
-    </section>
-
-    <section id="more-than-code" class="page-section centered-section" aria-labelledby="more-than-code-title">
-      <div class="section-number">02</div>
-      <div class="section-heading">
-        <p class="eyebrow">More than source</p>
-        <h2 id="more-than-code-title">Software projects create more than code.</h2>
-        <p>Every project accumulates the work around the work: notes, decisions, assets, tasks, timelines, and status.</p>
-      </div>
-      <div class="tool-strip" aria-label="project context types">
-        <article><span class="github-mark"></span><strong>GitHub</strong><small>Code</small></article>
-        <article><span class="doc-mark"></span><strong>Docs</strong><small>Requirements</small></article>
-        <article><span class="note-mark"></span><strong>Notes</strong><small>Decisions</small></article>
-        <article><span class="task-mark"></span><strong>Tasks</strong><small>Progress</small></article>
-        <article><span class="file-mark"></span><strong>Files</strong><small>Assets</small></article>
-      </div>
-      <figure class="screenshot-frame wide-shot">
-        <img
-          src="assets/drift-project-card.png"
-          alt="drift compact project overview card with tasks and notes"
-        />
-      </figure>
-    </section>
-
-    <section id="repository" class="page-section split-section" aria-labelledby="repository-title">
-      <div class="section-number">03</div>
-      <div class="section-copy">
-        <p class="eyebrow">Repository-centered</p>
-        <h2 id="repository-title">Connect your repository.</h2>
-        <p>
-          drift treats the repository as the center of the project. Link a codebase once,
-          then keep every note, task, file, screenshot, and decision attached to it.
-        </p>
-        <ul class="check-list">
-          <li>Tasks stay tied to the project they belong to.</li>
-          <li>Notes and documentation live beside the code context.</li>
-          <li>Repository metadata stays visible when you need it.</li>
-        </ul>
-      </div>
-      <figure class="screenshot-frame angled-shot">
-        <img
-          src="assets/drift-repository-activity.png"
-          alt="drift repository activity view with task and commit timeline"
-        />
-      </figure>
-    </section>
-
-    <section id="context" class="page-section split-section reverse-section" aria-labelledby="context-title">
-      <div class="section-number">04</div>
-      <figure class="screenshot-frame layered-shot">
-        <img
-          src="assets/drift-project-timeline.png"
-          alt="drift project workspace with project notes, tasks, timeline, and project tabs"
-        />
-      </figure>
-      <div class="section-copy">
-        <p class="eyebrow">Context that persists</p>
-        <h2 id="context-title">Stop rebuilding project context.</h2>
-        <p>
-          Every project has memory: why a decision was made, what needs to be built,
-          how the system works, and where the useful files are. drift keeps that context
-          together instead of making you rediscover it every week.
-        </p>
-        <div class="context-lines">
-          <span>Why decisions were made.</span>
-          <span>What needs to be built.</span>
-          <span>How systems work.</span>
-          <span>Where files belong.</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="local-first" class="page-section data-section" aria-labelledby="local-first-title">
-      <div class="section-number">05</div>
-      <div class="section-heading">
-        <p class="eyebrow">Your data</p>
-        <h2 id="local-first-title">Your workspace. Your data.</h2>
-        <p>Work offline, keep ownership, and decide when a project should sync.</p>
-      </div>
-      <div class="principles">
-        <article>
-          <span class="file-mark" aria-hidden="true"></span>
-          <strong>LOCAL STORAGE</strong>
-          <p>Project context stays yours.</p>
-        </article>
-        <article>
-          <span class="doc-mark" aria-hidden="true"></span>
-          <strong>OFFLINE READY</strong>
-          <p>Keep working anywhere.</p>
-        </article>
-        <article>
-          <span class="task-mark" aria-hidden="true"></span>
-          <strong>SYNC OPTIONAL</strong>
-          <p>Connect GitHub when needed.</p>
-        </article>
-      </div>
-      <figure class="screenshot-frame small-shot">
-        <img
-          src="assets/drift-local-settings.png"
-          alt="drift local data and connection settings"
-        />
-      </figure>
-    </section>
-
-    <section id="subscribe" class="page-section final-section" aria-labelledby="subscribe-title">
-      <div class="section-number">06</div>
-      <div class="section-copy">
-        <p class="eyebrow">Keep moving</p>
-        <h2 id="subscribe-title">Clone the repository. Continue working.</h2>
-        <p>
-          drift is built for a future where project context travels with the code. Open a
-          repository and instantly recover the tasks, notes, documentation, assets, and
-          decisions that make the project understandable.
-        </p>
-        <ul class="icon-list">
-          <li>Tasks</li>
-          <li>Notes</li>
-          <li>Documentation</li>
-          <li>Assets</li>
-          <li>Decisions</li>
-        </ul>
-      </div>
-      <div class="workflow">
-  <div class="workflow-card">Connect a repository</div>
-
-  <div class="arrow" aria-hidden="true">&darr;</div>
-
-  <div class="workflow-card">Open it in <strong>drift</strong></div>
-
-  <div class="arrow" aria-hidden="true">&darr;</div>
-
-  <div class="workflow-card">Tasks, notes & assets restored</div>
-
-  <div class="arrow" aria-hidden="true">&darr;</div>
-
-  <div class="workflow-card">Keep building</div>
-</div>
-      <div class="closing-card">
+          x
+        </button>
         <div>
-          <h2>Software projects need more than source code.</h2>
-          <p>drift keeps everything else connected.</p>
+          <p class="eyebrow">Subscribe</p>
+          <h3 id="top-subscribe-title">Join the drift waitlist.</h3>
+          <p>Get launch updates, beta access, and future features.</p>
         </div>
         <div class="subscribe-panel ml-subscribe-form-42186436">
           <form
@@ -280,98 +149,404 @@
             method="post"
             target="_blank"
           >
-          <label class="sr-only" for="bottom-subscribe-email">Email</label>
-          <input id="bottom-subscribe-email" aria-label="email" aria-required="true" type="email" name="fields[email]" placeholder="Email" autocomplete="email" required />
+            <label class="sr-only" for="top-subscribe-email">Email</label>
+            <input
+              id="top-subscribe-email"
+              aria-label="email"
+              aria-required="true"
+              type="email"
+              name="fields[email]"
+              placeholder="Email"
+              autocomplete="email"
+              required
+            />
             <input type="hidden" name="ml-submit" value="1" />
             <input type="hidden" name="anticsrf" value="true" />
             <button class="button primary" type="submit">Join drift</button>
-            <p>You can unsubscribe anytime. For more details, review our <a href="docs/privacy-policy.html">Privacy Policy</a>.</p>
+            <p>
+              You can unsubscribe anytime. For more details, review our
+              <a href="docs/privacy-policy.html">Privacy Policy</a>.
+            </p>
           </form>
           <div class="subscribe-success row-success" style="display: none">
             <strong>Thank you!</strong>
             <p>You have successfully joined the subscriber list.</p>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <span>&copy; Ava Thalheim</span>
-    <a href="https://avathalheim.dev/" target="_blank" rel="noopener noreferrer">avathalheim.dev</a>
-    <a href="mailto:avocadowitharms@gmail.com">avocadowitharms@gmail.com</a>
-    <nav class="footer-links" aria-label="Support and legal">
-      <a href="docs/support.html">Support</a>
-      <a href="docs/privacy-policy.html">Privacy</a>
-      <a href="docs/terms-of-use.html">Terms</a>
-    </nav>
-    <div class="footer-actions">
-      <a class="footer-pill coffee-link" href="https://buymeacoffee.com/avocadowita" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h12v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V5Zm14 2h1a3 3 0 0 1 0 6h-1V7ZM6 7v5a3 3 0 0 0 3 3h2a3 3 0 0 0 3-3V7H6Zm12 2v2h1a1 1 0 0 0 0-2h-1ZM3 19h15v2H3v-2Z"/></svg>
-        <span>Buy me a coffee</span>
-      </a>
-      <a class="footer-pill top-link" href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+      </article>
     </div>
-  </footer>
-  <script>
-    function ml_webform_success_42186436() {
-      var forms = document.querySelectorAll(".ml-subscribe-form-42186436 .row-form");
-      var successes = document.querySelectorAll(".ml-subscribe-form-42186436 .row-success");
 
-      forms.forEach(function (form) {
-        form.style.display = "none";
-      });
+    <main>
+      <section
+        id="workspace"
+        class="page-section hero-section"
+        aria-labelledby="workspace-title"
+      >
+        <div class="section-number">01</div>
+        <div class="section-copy">
+          <p class="eyebrow">drift</p>
+          <h1 id="workspace-title">The workspace around your repository.</h1>
+          <p>
+            Manage tasks, notes, timelines, files, and project context directly
+            alongside your code. drift gives every repository a real workspace
+            without forcing your project into another cloud tool.
+          </p>
+          <div class="actions">
+            <button class="button primary" type="button" data-subscribe-open>
+              Subscribe
+            </button>
+          </div>
 
-      successes.forEach(function (success) {
-        success.style.display = "grid";
-      });
-    }
+          <p class="fine-print">
+            Local-first. Developer-focused. Built for real projects.
+          </p>
+        </div>
 
-    (function () {
-      var openButtons = document.querySelectorAll("[data-subscribe-open]");
-      var modal = document.querySelector("[data-subscribe-modal]");
-      var closeButtons = document.querySelectorAll("[data-subscribe-close]");
-      var lastTrigger = null;
+        <div class="repo-visual">
+          <img
+            src="assets/workspace_git.png"
+            alt="Repository workspace visual with tasks, notes, documentation, assets, and decisions attached to a git fork"
+          />
+        </div>
+      </section>
 
-      function openSubscribe(trigger) {
-        lastTrigger = trigger;
-        modal.hidden = false;
-        document.body.classList.add("has-modal");
+      <section
+        id="more-than-code"
+        class="page-section centered-section"
+        aria-labelledby="more-than-code-title"
+      >
+        <div class="section-number">02</div>
+        <div class="section-heading">
+          <p class="eyebrow">More than source</p>
+          <h2 id="more-than-code-title">
+            Software projects create more than code.
+          </h2>
+          <p>
+            Every project accumulates the work around the work: notes,
+            decisions, assets, tasks, timelines, and status.
+          </p>
+        </div>
+        <div class="tool-strip" aria-label="project context types">
+          <article>
+            <span class="material-symbols-rounded">sync_saved_locally</span
+            ><strong>GitHub</strong><small>Code</small>
+          </article>
+          <article>
+            <span class="material-symbols-rounded">description</span
+            ><strong>Docs</strong><small>Requirements</small>
+          </article>
+          <article>
+            <span class="material-symbols-rounded">note</span
+            ><strong>Notes</strong><small>Decisions</small>
+          </article>
+          <article>
+            <span class="material-symbols-rounded">check_circle</span
+            ><strong>Tasks</strong><small>Progress</small>
+          </article>
+          <article>
+            <span class="material-symbols-rounded">folder</span
+            ><strong>Files</strong><small>Assets</small>
+          </article>
+        </div>
+        <figure class="screenshot-frame wide-shot">
+          <img
+            src="assets/drift-project-card.png"
+            alt="drift compact project overview card with tasks and notes"
+          />
+        </figure>
+      </section>
 
-        var email = modal.querySelector("#top-subscribe-email");
-        if (email) {
-          email.focus();
-        }
-      }
+      <section
+        id="repository"
+        class="page-section split-section"
+        aria-labelledby="repository-title"
+      >
+        <div class="section-number">03</div>
+        <div class="section-copy">
+          <p class="eyebrow">Repository-centered</p>
+          <h2 id="repository-title">Connect your repository.</h2>
+          <p>
+            drift treats the repository as the center of the project. Link a
+            codebase once, then keep every note, task, file, screenshot, and
+            decision attached to it.
+          </p>
+          <ul class="check-list">
+            <li>Tasks stay tied to the project they belong to.</li>
+            <li>Notes and documentation live beside the code context.</li>
+            <li>Repository metadata stays visible when you need it.</li>
+          </ul>
+        </div>
+        <figure class="screenshot-frame angled-shot">
+          <img
+            src="assets/drift-repository-activity.png"
+            alt="drift repository activity view with task and commit timeline"
+          />
+        </figure>
+      </section>
 
-      function closeSubscribe() {
-        modal.hidden = true;
-        document.body.classList.remove("has-modal");
+      <section
+        id="context"
+        class="page-section split-section reverse-section"
+        aria-labelledby="context-title"
+      >
+        <div class="section-number">04</div>
+        <figure class="screenshot-frame layered-shot">
+          <img
+            src="assets/drift-project-timeline.png"
+            alt="drift project workspace with project notes, tasks, timeline, and project tabs"
+          />
+        </figure>
+        <div class="section-copy">
+          <p class="eyebrow">Context that persists</p>
+          <h2 id="context-title">Stop rebuilding project context.</h2>
+          <p>
+            Every project has memory: why a decision was made, what needs to be
+            built, how the system works, and where the useful files are. drift
+            keeps that context together instead of making you rediscover it
+            every week.
+          </p>
+          <div class="context-lines">
+            <span>Why decisions were made.</span>
+            <span>What needs to be built.</span>
+            <span>How systems work.</span>
+            <span>Where files belong.</span>
+          </div>
+        </div>
+      </section>
 
-        if (lastTrigger) {
-          lastTrigger.focus();
-        }
-      }
+      <section
+        id="local-first"
+        class="page-section data-section"
+        aria-labelledby="local-first-title"
+      >
+        <div class="section-number">05</div>
+        <div class="section-heading">
+          <p class="eyebrow">Your data</p>
+          <h2 id="local-first-title">Your workspace. Your data.</h2>
+          <p>
+            Work offline, keep ownership, and decide when a project should sync.
+          </p>
+        </div>
+        <div class="principles">
+          <article>
+            <span class="material-symbols-rounded">sync_saved_locally</span>
+            <strong>LOCAL STORAGE</strong>
+            <p>Project context stays with you.</p>
+          </article>
+          <article>
+            <span class="material-symbols-rounded">android_wifi_4_bar_off</span>
+            <strong>OFFLINE READY</strong>
+            <p>Keep working anywhere.</p>
+          </article>
+          <article>
+            <span class="material-symbols-rounded">sync</span>
+            <strong>SYNC OPTIONAL</strong>
+            <p>Connect GitHub when needed.</p>
+          </article>
+        </div>
+        <figure class="screenshot-frame small-shot">
+          <img
+            src="assets/drift-local-settings.png"
+            alt="drift local data and connection settings"
+          />
+        </figure>
+      </section>
 
-      openButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-          openSubscribe(button);
+      <section
+        id="subscribe"
+        class="page-section final-section"
+        aria-labelledby="subscribe-title"
+      >
+        <div class="section-number">06</div>
+        <div class="section-copy">
+          <p class="eyebrow">Keep moving</p>
+          <h2 id="subscribe-title">
+            Clone the repository. <br />
+            Continue working.
+          </h2>
+          <p>
+            drift is built for devs that want the full project context to travel
+            with the code. Pull a repository and instantly recover the tasks,
+            notes, documentation, assets, and decisions that make the project
+            understandable.
+          </p>
+          <ul class="icon-list">
+            <li>Tasks</li>
+            <li>Notes</li>
+            <li>Documentation</li>
+            <li>Assets</li>
+            <li>Decisions</li>
+          </ul>
+        </div>
+        <div class="flow-steps">
+          <div class="flow-card">Install drift</div>
+          <span class="material-symbols-rounded flow-arrow"
+            >arrow_downward</span
+          >
+
+          <div class="flow-card">Connect github.</div>
+          <span class="material-symbols-rounded flow-arrow"
+            >arrow_downward</span
+          >
+
+          <div class="flow-card">Pull repository from github.</div>
+          <span class="material-symbols-rounded flow-arrow"
+            >arrow_downward</span
+          >
+
+          <div class="flow-card">drift.workspace restored.</div>
+          <span class="material-symbols-rounded flow-arrow"
+            >arrow_downward</span
+          >
+
+          <div class="flow-card">Tasks, notes & assets, all there.</div>
+          <span class="material-symbols-rounded flow-arrow"
+            >arrow_downward</span
+          >
+
+          <div class="flow-card">Keep building.</div>
+        </div>
+        <div class="closing-card">
+          <div>
+            <h2>Software projects need more than source code.</h2>
+            <p>drift keeps everything connected.</p>
+          </div>
+          <div class="subscribe-panel ml-subscribe-form-42186436">
+            <form
+              class="subscribe-form ml-block-form row-form"
+              action="https://assets.mailerlite.com/jsonp/2378130/forms/189334657074988207/subscribe"
+              method="post"
+              target="_blank"
+            >
+              <label class="sr-only" for="bottom-subscribe-email">Email</label>
+              <input
+                id="bottom-subscribe-email"
+                aria-label="email"
+                aria-required="true"
+                type="email"
+                name="fields[email]"
+                placeholder="Email"
+                autocomplete="email"
+                required
+              />
+              <input type="hidden" name="ml-submit" value="1" />
+              <input type="hidden" name="anticsrf" value="true" />
+              <button class="button primary" type="submit">Join drift</button>
+              <p>
+                You can unsubscribe anytime. For more details, review our
+                <a href="docs/privacy-policy.html">Privacy Policy</a>.
+              </p>
+            </form>
+            <div class="subscribe-success row-success" style="display: none">
+              <strong>Thank you!</strong>
+              <p>You have successfully joined the subscriber list.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>&copy; Ava Thalheim</span>
+      <a
+        href="https://avathalheim.dev/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >avathalheim.dev</a
+      >
+      <a href="mailto:avocadowitharms@gmail.com">avocadowitharms@gmail.com</a>
+      <nav class="footer-links" aria-label="Support and legal">
+        <a href="docs/support.html">Support</a>
+        <a href="docs/privacy-policy.html">Privacy</a>
+        <a href="docs/terms-of-use.html">Terms</a>
+      </nav>
+      <div class="footer-actions">
+        <a
+          class="footer-pill coffee-link"
+          href="https://buymeacoffee.com/avocadowita"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M4 5h12v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V5Zm14 2h1a3 3 0 0 1 0 6h-1V7ZM6 7v5a3 3 0 0 0 3 3h2a3 3 0 0 0 3-3V7H6Zm12 2v2h1a1 1 0 0 0 0-2h-1ZM3 19h15v2H3v-2Z"
+            />
+          </svg>
+          <span>Buy me a coffee</span>
+        </a>
+        <a class="footer-pill top-link" href="#top"
+          >Back to top <span aria-hidden="true">&uarr;</span></a
+        >
+      </div>
+    </footer>
+    <script>
+      function ml_webform_success_42186436() {
+        var forms = document.querySelectorAll(
+          ".ml-subscribe-form-42186436 .row-form",
+        );
+        var successes = document.querySelectorAll(
+          ".ml-subscribe-form-42186436 .row-success",
+        );
+
+        forms.forEach(function (form) {
+          form.style.display = "none";
         });
-      });
 
-      closeButtons.forEach(function (button) {
-        button.addEventListener("click", closeSubscribe);
-      });
+        successes.forEach(function (success) {
+          success.style.display = "grid";
+        });
+      }
 
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape" && !modal.hidden) {
-          closeSubscribe();
+      (function () {
+        var openButtons = document.querySelectorAll("[data-subscribe-open]");
+        var modal = document.querySelector("[data-subscribe-modal]");
+        var closeButtons = document.querySelectorAll("[data-subscribe-close]");
+        var lastTrigger = null;
+
+        function openSubscribe(trigger) {
+          lastTrigger = trigger;
+          modal.hidden = false;
+          document.body.classList.add("has-modal");
+
+          var email = modal.querySelector("#top-subscribe-email");
+          if (email) {
+            email.focus();
+          }
         }
-      });
-    }());
 
-    fetch("https://assets.mailerlite.com/jsonp/2378130/forms/189334657074988207/takel").catch(function () {});
-  </script>
-  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
-</body>
+        function closeSubscribe() {
+          modal.hidden = true;
+          document.body.classList.remove("has-modal");
+
+          if (lastTrigger) {
+            lastTrigger.focus();
+          }
+        }
+
+        openButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            openSubscribe(button);
+          });
+        });
+
+        closeButtons.forEach(function (button) {
+          button.addEventListener("click", closeSubscribe);
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && !modal.hidden) {
+            closeSubscribe();
+          }
+        });
+      })();
+
+      fetch(
+        "https://assets.mailerlite.com/jsonp/2378130/forms/189334657074988207/takel",
+      ).catch(function () {});
+    </script>
+    <script
+      src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b"
+      type="text/javascript"
+    ></script>
+  </body>
 </html>
