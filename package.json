@@ -1,6 +1,9 @@
 {
   "scripts": {
-    "seo:generate": "node scripts/generate-sitemap.mjs"
+    "blog:generate": "node scripts/generate-blog.mjs",
+    "seo:generate": "node scripts/generate-sitemap.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs"
   },
   "dependencies": {
     "@material/web": "^2.4.1"

@@ -4,10 +4,10 @@
     {
       "type": "pwa-msedge",
       "request": "launch",
-      "name": "Open Flowtime",
-      "url": "http://localhost:5500/index.html",
+      "name": "Open Drift Blog",
+      "url": "http://localhost:5500/blog/",
       "webRoot": "${workspaceFolder}",
-      "preLaunchTask": "Serve Flowtime"
+      "preLaunchTask": "Open Drift Blog Preview"
     }
   ]
 }

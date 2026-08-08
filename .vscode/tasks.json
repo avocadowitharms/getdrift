@@ -2,29 +2,36 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Serve Flowtime",
+      "label": "Build Drift Blog",
       "type": "shell",
-      "command": "powershell",
+      "command": "node",
       "args": [
-        "-NoProfile",
-        "-ExecutionPolicy",
-        "Bypass",
-        "-File",
-        "${workspaceFolder}\\scripts\\serve.ps1",
-        "-Port",
-        "5500"
+        "${workspaceFolder}\\scripts\\build.mjs"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Serve Drift",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "${workspaceFolder}\\scripts\\serve.mjs"
       ],
       "isBackground": true,
       "problemMatcher": {
-        "owner": "flowtime-preview",
+        "owner": "drift-preview",
         "pattern": {
           "regexp": "^(.*)$",
           "message": 1
         },
         "background": {
           "activeOnStart": true,
-          "beginsPattern": "Starting Flowtime preview",
-          "endsPattern": "Flowtime preview ready"
+          "beginsPattern": ".*",
+          "endsPattern": "Drift preview ready"
         }
       },
       "presentation": {
@@ -33,13 +40,27 @@
       }
     },
     {
-      "label": "Open Flowtime Preview",
+      "label": "Open Drift Blog File",
       "type": "shell",
       "command": "Start-Process",
       "args": [
-        "http://localhost:5500/index.html"
+        "${workspaceFolder}\\blog-preview.html"
       ],
-      "dependsOn": "Serve Flowtime",
+      "dependsOn": "Build Drift Blog",
+      "problemMatcher": []
+    },
+    {
+      "label": "Open Drift Blog Preview",
+      "type": "shell",
+      "command": "Start-Process",
+      "args": [
+        "http://localhost:5500/blog/"
+      ],
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Build Drift Blog",
+        "Serve Drift"
+      ],
       "problemMatcher": [],
       "group": {
         "kind": "build",

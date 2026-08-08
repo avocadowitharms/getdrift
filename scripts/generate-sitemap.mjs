@@ -1,33 +1,33 @@
 import { stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { getBlogPosts, escapeXml, siteUrl } from "./blog-utils.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const siteUrl = "https://driftworkspace.app";
 
-const pages = [
+const staticPages = [
   { file: "index.html", url: "/", changefreq: "weekly", priority: "1.0" },
+  { file: "blog/index.html", url: "/blog/", changefreq: "weekly", priority: "0.8" },
   { file: "docs/privacy-policy.html", url: "/docs/privacy-policy.html", changefreq: "yearly", priority: "0.3" },
   { file: "docs/support.html", url: "/docs/support.html", changefreq: "monthly", priority: "0.4" },
   { file: "docs/terms-of-use.html", url: "/docs/terms-of-use.html", changefreq: "yearly", priority: "0.3" }
 ];
-
-function escapeXml(value) {
-  return value
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&apos;");
-}
 
 async function lastModified(file) {
   const { mtime } = await stat(path.join(root, file));
   return mtime.toISOString().slice(0, 10);
 }
 
+const blogPosts = await getBlogPosts();
+const blogPages = blogPosts.map((post) => ({
+  file: `blog/${post.slug}/index.html`,
+  url: post.url,
+  changefreq: post.type === "devlog" ? "monthly" : "weekly",
+  priority: post.featured ? "0.8" : "0.6"
+}));
+
 const entries = await Promise.all(
-  pages.map(async (page) => ({
+  [...staticPages, ...blogPages].map(async (page) => ({
     ...page,
     lastmod: await lastModified(page.file)
   }))
